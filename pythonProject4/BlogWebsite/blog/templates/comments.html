@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Comments</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Blog ID</th>
+            <th>User ID</th>
+            <th>Content</th>
+            <th>Date Posted</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for comment in comments %}
+        <tr>
+            <td>{{ comment.post_id }}</td>
+            <td>{{ comment.user_id }}</td>
+            <td>{{ comment.content }}</td>
+            <td>{{ comment.date_posted }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

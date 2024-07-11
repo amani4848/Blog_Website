@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>The blog lists :</h1>
+<nav>
+    <ul>
+        <li><a href="{% url 'users' %}">Users</a></li>
+        <li><a href="{% url 'blogs' %}">Blogs</a></li>
+        <li><a href="{% url 'comments' %}">Comments</a></li>
+        <li><a href="{% url 'categories' %}">Categories</a></li>
+    </ul>
+</nav>
+{% endblock %}
+
